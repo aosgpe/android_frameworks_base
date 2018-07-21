@@ -4101,6 +4101,11 @@ public final class Settings {
         public static final String STATUS_BAR_QUICK_QS_PULLDOWN = "status_bar_quick_qs_pulldown";
 
         /**
+         * @hide
+         */
+        public static final String USE_BOTTOM_GESTURE_NAVIGATION = "use_bottom_gesture_navigation";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -7831,6 +7836,12 @@ public final class Settings {
          * @hide
          */
         public static final String QS_AUTO_ADDED_TILES = "qs_auto_tiles";
+
+        /**
+         * Add or remove software navigation bar
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_VISIBLE = "navigation_bar_visible";
 
         private static final Validator QS_AUTO_ADDED_TILES_VALIDATOR = new Validator() {
             @Override
