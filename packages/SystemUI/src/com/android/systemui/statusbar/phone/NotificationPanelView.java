@@ -302,19 +302,11 @@ public class NotificationPanelView extends PanelView implements
             .setAnimationFinishListener(mAnimatorListenerAdapter)
             .setCustomInterpolator(PANEL_ALPHA.getProperty(), Interpolators.ALPHA_IN);
 
-<<<<<<< HEAD
-=======
-    private GestureDetector mDoubleTapToSleepGesture;
-    private boolean mIsLockscreenDoubleTapEnabled;
-
-    private int mStatusBarHeaderHeight;
-
     private Handler mHandler = new Handler();
     private SettingsObserver mSettingsObserver;
 
     private int mOneFingerQuickSettingsIntercept;
 
->>>>>>> 66b24706ccd... Add Quick Settings Pulldown options
     public NotificationPanelView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setWillNotDraw(!DEBUG);
@@ -324,21 +316,8 @@ public class NotificationPanelView extends PanelView implements
         setAccessibilityPaneTitle(determineAccessibilityPaneTitle());
         mAlphaPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.MULTIPLY));
         setPanelAlpha(255, false /* animate */);
-<<<<<<< HEAD
-=======
-
-        mDoubleTapToSleepGesture = new GestureDetector(context,
-                new GestureDetector.SimpleOnGestureListener() {
-            @Override
-            public boolean onDoubleTap(MotionEvent e) {
-                AEXUtils.switchScreenOff(context);
-                return true;
-            }
-        });
 
         mSettingsObserver = new SettingsObserver(mHandler);
-
->>>>>>> 66b24706ccd... Add Quick Settings Pulldown options
     }
 
     public void setStatusBar(StatusBar bar) {
