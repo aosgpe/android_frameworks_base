@@ -5848,7 +5848,7 @@ public class AudioService extends IAudioService.Stub
         mConnectedDevices.remove(
                 makeDeviceListKey(AudioSystem.DEVICE_OUT_BLUETOOTH_A2DP, address));
         // Remove A2DP routes as well
-        setCurrentAudioRouteName(null);
+        setCurrentAudioRouteNameIfPossible(null);
         if (mDockAddress == address) {
             mDockAddress = null;
         }
