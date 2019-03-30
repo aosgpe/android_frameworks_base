@@ -931,6 +931,7 @@ public class StatusBar extends SystemUI implements DemoMode,
 
         if (ENABLE_LOCKSCREEN_WALLPAPER) {
             mLockscreenWallpaper = new LockscreenWallpaper(mContext, this, mHandler);
+			mContext.getSystemService(UiModeManager.class).setNightMode(UiModeManager.MODE_NIGHT_YES);
         }
 
         mKeyguardIndicationController =
